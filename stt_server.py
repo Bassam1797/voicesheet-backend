@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-model_name = os.getenv("WHISPER_MODEL", "base")
+model_name = os.getenv("WHISPER_MODEL", "tiny")
 device = os.getenv("WHISPER_DEVICE", "auto")
 precision = os.getenv("WHISPER_PRECISION", "int8_float16")
 model = WhisperModel(model_name, device=device, compute_type=precision)
